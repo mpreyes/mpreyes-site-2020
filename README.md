@@ -42,3 +42,11 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+## Actual ReadME
+
+The age-old tradition of re-doing your website every year, better than ever b/c of the quarantine and all the time I've got.
+
+![mpreyes-site V1 plans](link-to-image)
