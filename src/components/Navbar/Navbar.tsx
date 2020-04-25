@@ -11,6 +11,7 @@ interface NavbarProps {
 const StyledNavbar = styled(AppBar)`
     display: flex;
     background: black;
+    
 `;
 
 const StyledToolbar = styled(Toolbar)`
@@ -19,7 +20,7 @@ const StyledToolbar = styled(Toolbar)`
 `;
 
 const StyledHeart = styled.i`
-    padding-top: -12px;
+  
 `;
 
 const usesStyles = makeStyles((theme) => ({

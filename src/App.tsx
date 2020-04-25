@@ -6,14 +6,8 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import { Navbar } from './components/Navbar';
 import { CoreAPI } from './core/CoreApi';
 import { theme } from './theme/theme';
-import BannerImg from './images/banner.jpg';
+import { Banner } from './components/Banner';
 
-
-const DeskBanner = styled(Box)`
-  height: 45%;
-  background-color: #68bd7b;
-  background-image: url(${BannerImg}) no-repeat; 
-`;
 
 const LinksContainer = styled(Box)`
   background: #7b68bd;
@@ -28,6 +22,7 @@ const InnerContainer = styled(Container)`
 const MysteryContainer = styled(Box)`
   min-height: 20%;
   background-color: #bd6880;
+
 `;
 
 const FooterContainer = styled(Box)`
@@ -42,14 +37,11 @@ function App() {
    <ThemeProvider theme={theme}>
     <div className="App">
       <Navbar/>
-        <DeskBanner>
-          <p> Banner Image/ Clickable desk</p>
-          <Button color="inherit" onClick={()=> {}}>Toggle imgß</Button>
-        </DeskBanner>
+          <Banner/>
         <LinksContainer>
           <p> button links</p>
           <InnerContainer>
-          <Paper elevation={1}>
+          <Paper elevation={2}>
           <Button color="inherit">Resume</Button>
             </Paper>
             <Paper elevation={1}>
