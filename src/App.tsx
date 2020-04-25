@@ -5,20 +5,19 @@ import { Container, Paper, Box, Button } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { Navbar } from './components/Navbar';
 import { CoreAPI } from './core/CoreApi';
-import { theme } from './theme';
+import { theme } from './theme/theme';
 import BannerImg from './images/banner.jpg';
 
 
 const DeskBanner = styled(Box)`
-  height: 300px;
-  width: 100%;
+  height: 45%;
   background-color: #68bd7b;
   background-image: url(${BannerImg}) no-repeat; 
 `;
 
 const LinksContainer = styled(Box)`
   background: #7b68bd;
-  height: 300px;
+  min-height: 30%;
 `;
 const InnerContainer = styled(Container)`
   display: flex;
@@ -27,14 +26,15 @@ const InnerContainer = styled(Container)`
 `;
 
 const MysteryContainer = styled(Box)`
-  height: 200px;
+  min-height: 20%;
   background-color: #bd6880;
 `;
 
 const FooterContainer = styled(Box)`
-  height: 50px;
+  min-height: 5%;
   background-color: #bd68aa;
-`
+`;
+
 function App() { 
   let coreApi = new CoreAPI("boot");
   console.log("whats here", coreApi.get('/search', {}));
@@ -42,12 +42,10 @@ function App() {
    <ThemeProvider theme={theme}>
     <div className="App">
       <Navbar/>
-      <div>
         <DeskBanner>
           <p> Banner Image/ Clickable desk</p>
           <Button color="inherit" onClick={()=> {}}>Toggle imgß</Button>
         </DeskBanner>
-        
         <LinksContainer>
           <p> button links</p>
           <InnerContainer>
@@ -68,7 +66,6 @@ function App() {
         <FooterContainer>
           <p> The footer! &copy; Madelyn Reyes 2020</p>
         </FooterContainer>
-      </div>
     </div>
     </ThemeProvider>
   );

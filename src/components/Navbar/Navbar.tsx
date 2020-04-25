@@ -2,20 +2,24 @@ import * as React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import styled from 'styled-components';
 import {  makeStyles } from '@material-ui/core/styles';
-import { Toolbar, IconButton, Typography, Button, Container } from '@material-ui/core';
+import { Toolbar, Typography, Button, Container } from '@material-ui/core';
 
 interface NavbarProps {
 
 }
 
-const StyledNavbar = styled(AppBar)({
-    display: 'flex',
-    background: 'black'
-});
+const StyledNavbar = styled(AppBar)`
+    display: flex;
+    background: black;
+`;
 
 const StyledToolbar = styled(Toolbar)`
-    display: 'flex',
-    justifyContent: 'space-between'
+    display: flex;
+    justify-content: space-between;
+`;
+
+const StyledHeart = styled.i`
+    padding-top: -12px;
 `;
 
 const usesStyles = makeStyles((theme) => ({
@@ -23,11 +27,6 @@ const usesStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(2),
     }
 }));
-
-const StyledHeart = styled.i({
-    className: 'nes-icon is-small heart',
-
-});
 
 export const Navbar: React.FunctionComponent<NavbarProps> = ({}) => {
     const classes = usesStyles();
@@ -40,8 +39,8 @@ export const Navbar: React.FunctionComponent<NavbarProps> = ({}) => {
  
             <Container>
            
-                Things I <StyledHeart/>
-                <i className="nes-icon is-small heart"></i>
+                Things I <StyledHeart className="nes-icon is-small heart"/>
+
             
             <Button color="inherit">Recipes</Button>
             <Button color="inherit">Music</Button>
